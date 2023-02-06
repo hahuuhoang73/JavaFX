@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="Danhba" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtName"  layoutX="53.0" layoutY="55.0" text="Nhập tên " />
+      <TextField fx:id="txtPhone" layoutX="53.0" layoutY="125.0" text="Số Điện Thoại " />
+      <Button onAction="#sumit" layoutX="174.0" layoutY="185.0" mnemonicParsing="false" text="Submit" />
+      <ListView fx:id="lv" onMouseClicked="#edit" layoutX="358.0" layoutY="71.0" prefHeight="200.0" prefWidth="200.0" />
+      <Text layoutX="420.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách " />
+      <Button onAction="#sumit1" layoutX="426.0" layoutY="290.0" mnemonicParsing="false" text="Sont " />
+   </children>
+</Pane>
