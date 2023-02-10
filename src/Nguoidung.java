@@ -1,10 +1,29 @@
+import javafx.scene.control.Button;
+
 public class Nguoidung {
+
     String Name;
     String Phone;
+    Button edit;
+
+    public Button getEdit() {
+        return edit;
+    }
+
+    public void setEdit(Button edit) {
+        this.edit = edit;
+    }
 
     public Nguoidung(String name, String phone) {
         Name = name;
         Phone = phone;
+        this.edit= new Button("Edit");
+        this.edit.setOnAction((event)->{
+           Danhba.editNguoidung=this;
+           Danhba.stName.setText(this.Name);
+         Danhba.stPhone.setText(this.Phone);
+        });
+
     }
 
     public String getName() {
@@ -26,7 +45,5 @@ public class Nguoidung {
         return this.Name;
     }
 
-    public void setOnAction(Object o) {
 
-    }
 }

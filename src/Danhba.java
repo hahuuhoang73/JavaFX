@@ -1,24 +1,30 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.net.URL;
+import java.util.*;
 
-public class Danhba {
+public class Danhba implements Initializable {
 
 
     public TextField txtPhone;
     public TextField txtName;
-    public Nguoidung editNguoidung;
-    public ListView<Nguoidung> lv;
+    public static  TextField stPhone;
+    public static  TextField stName;
+    public static  Nguoidung editNguoidung;
+
     public ObservableList<Nguoidung> listNguoidung = FXCollections.observableArrayList();
+    public TableColumn<Nguoidung,String> cfullname;
+    public TableColumn<Nguoidung,String> cphone;
+    public TableView<Nguoidung> tbview;
+
+    public TableColumn<Nguoidung,Button> action;
+
 
     public void sumit(ActionEvent actionEvent) {
        String ten = txtName.getText();
@@ -34,14 +40,16 @@ public class Danhba {
                }
            }
        }
-      lv.setItems(listNguoidung);
-      lv.refresh();
+        tbview.setItems(listNguoidung);
+        tbview.refresh();
+//      lv.setItems(listNguoidung);
+//      lv.refresh();
       clearInput();
 
     }
 
     public void edit(MouseEvent mouseEvent) {
-        editNguoidung=lv.getSelectionModel().getSelectedItem();
+//        editNguoidung=lv.getSelectionModel().getSelectedItem();
         txtName.setText(editNguoidung.Name);
         txtPhone.setText(editNguoidung.Phone);
 
@@ -50,20 +58,31 @@ public class Danhba {
         txtName.clear();
         txtPhone.clear();
     }
-    private boolean ascending = true;
-    public void sumit1(ActionEvent actionEvent) {
-         ascending = !ascending;
-     Collections.sort(listNguoidung, new Comparator<Nguoidung>() {
-         @Override
-         public int compare(Nguoidung o1, Nguoidung o2) {
-             if (ascending) {
-                 return o1.Name.compareTo(o2.Name);
-             } else {
-                 return o2.Name.compareTo(o1.Name);
-             }
-         }
-     });
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        cfullname.setCellValueFactory(new PropertyValueFactory<>("name"));
+        cphone.setCellValueFactory(new PropertyValueFactory<>("phone"));
+        action.setCellValueFactory(new PropertyValueFactory<>("edit"));
+
+        stName=txtName;
+        stPhone=txtPhone;
 
     }
+//    private boolean ascending = true;
+//    public void sumit1(ActionEvent actionEvent) {
+//         ascending = !ascending;
+//     Collections.sort(listNguoidung, new Comparator<Nguoidung>() {
+//         @Override
+//         public int compare(Nguoidung o1, Nguoidung o2) {
+//             if (ascending) {
+//                 return o1.Name.compareTo(o2.Name);
+//             } else {
+//                 return o2.Name.compareTo(o1.Name);
+//             }
+//         }
+//     });
+
+
+//    }
 }
