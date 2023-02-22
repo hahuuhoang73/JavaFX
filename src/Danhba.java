@@ -42,6 +42,7 @@ public class Danhba implements Initializable {
        }
         tbview.setItems(listNguoidung);
         tbview.refresh();
+        editNguoidung = null;
 //      lv.setItems(listNguoidung);
 //      lv.refresh();
       clearInput();

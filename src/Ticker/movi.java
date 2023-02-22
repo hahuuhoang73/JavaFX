@@ -116,7 +116,7 @@ spiner2.setValueFactory(sp2);
     public  void total(){
         qty1 = spiner1.getValue();
         qty2= spiner2.getValue();
-        pr1=(qty1*20);
+        pr1=(qty1*25);
         pr2=(qty2*10);
         total = (pr1+pr2);
       ava_priceSP.setText("$"+String.valueOf(pr1));

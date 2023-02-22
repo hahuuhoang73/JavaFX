@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Studentlist">
+   <children>
+      <Text layoutX="328.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student list">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Text>
+      <Button layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#gotoHome" text="&lt;&lt;Back" />
+      <Button layoutX="754.0" layoutY="18.0" mnemonicParsing="false" onAction="#gotoAdd">
+         <graphic>
+            <FontAwesomeIcon glyphName="PLUS" />
+         </graphic>
+      </Button>
+      <TableView fx:id="tbStuden" layoutX="14.0" layoutY="85.0" prefHeight="504.0" prefWidth="773.0">
+        <columns>
+          <TableColumn fx:id="cID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="cName" prefWidth="156.0" text="Name" />
+            <TableColumn fx:id="cEmail" minWidth="0.0" prefWidth="151.0" text="Email" />
+            <TableColumn fx:id="cDate" minWidth="0.0" prefWidth="156.0" text="Date" />
+            <TableColumn fx:id="cGender" minWidth="0.0" prefWidth="70.0" text="Grender" />
+            <TableColumn fx:id="cIdzoom" minWidth="0.0" prefWidth="75.0" text="Idzoom" />
+            <TableColumn fx:id="cIdzoom1" minWidth="0.0" prefWidth="88.0" text="Action" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

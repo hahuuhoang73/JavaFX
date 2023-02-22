@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="controler.List" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="337.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class list">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tbClass" layoutX="32.0" layoutY="96.0" prefHeight="454.0" prefWidth="737.0">
+        <columns>
+          <TableColumn fx:id="cID" prefWidth="70.0" text="ID" />
+          <TableColumn fx:id="cName" prefWidth="270.0" text="Name" />
+            <TableColumn fx:id="cRoom" minWidth="0.0" prefWidth="153.0" text="Room" />
+            <TableColumn prefWidth="74.0" text="Action" />
+        </columns>
+      </TableView>
+      <Button onAction="#gotoCreat" layoutX="737.0" layoutY="30.0" mnemonicParsing="false">
+         <graphic>
+            <FontAwesomeIcon glyphName="PLUS" />
+         </graphic>
+      </Button>
+      <Button onAction="#gotoHome" layoutX="32.0" layoutY="29.0" mnemonicParsing="false" text="&lt;&lt;Back" />
+   </children>
+</Pane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Danhba">
+   <children>
+      <TextField fx:id="txtName" layoutX="53.0" layoutY="55.0" text="Nhập tên " />
+      <TextField fx:id="txtPhone" layoutX="53.0" layoutY="125.0" text="Số Điện Thoại " />
+      <Button layoutX="174.0" layoutY="185.0" mnemonicParsing="false" onAction="#sumit" text="Submit" />
+      <Text layoutX="420.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách " />
+      <TableView fx:id="tbview" layoutX="305.0" layoutY="71.0" prefHeight="200.0" prefWidth="227.0">
+        <columns>
+          <TableColumn fx:id="cfullname" prefWidth="75.0" text="fullname" />
+          <TableColumn fx:id="cphone" prefWidth="75.0" text="phone" />
+            <TableColumn fx:id="action" prefWidth="75.0" text="action" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

@@ -1,3 +1,4 @@
+import controler.Home;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,8 +20,11 @@ public class Main extends Application {
 //        Parent root = FXMLLoader.load(getClass().getResource("danhsach.fxml"));
 //        primaryStage.setScene(new Scene(root,800,600));
 //        primaryStage.show();
-        Parent root = FXMLLoader.load(getClass().getResource("telephone.fxml"));
+        Home.rootStage = primaryStage;
+        Parent root = FXMLLoader.load(getClass().getResource("ressouver/home.fxml"));
         primaryStage.setScene(new Scene(root,800,600));
         primaryStage.show();
+
     }
+
 }

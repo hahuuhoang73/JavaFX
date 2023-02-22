@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="Danhsach" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtNguoinhan" layoutX="33.0" layoutY="44.0" text="Người nhận " />
+      <TextField  fx:id="txtTieude" layoutX="33.0" layoutY="107.0" text="Tiêu Đề " />
+      <TextArea fx:id="txtNoidung" layoutX="26.0" layoutY="176.0" prefHeight="186.0" prefWidth="200.0" text="Nội dung " />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="txtInfo" layoutX="427.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách " />
+      <Button  onAction="#submit" layoutX="146.0" layoutY="385.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="73.0" text="Gửi " />
+   </children>
+</Pane>

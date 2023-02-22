@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Creat">
+   <children>
+      <Text fill="#0a0fff" layoutX="283.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a new class">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <Button layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#gotoList" style="-fx-background-color: blue;" text="&lt;&lt;Back" textFill="WHITE" />
+      <Line endX="680.0" fill="#1e00ff" layoutX="113.0" layoutY="76.0" startX="-100.0" stroke="#1e00ff" />
+      <TextField fx:id="txtName" layoutX="223.0" layoutY="206.0" prefHeight="64.0" prefWidth="353.0" promptText="Class Name" style="-fx-background-color: transparent; -fx-border-color: blue;" />
+      <TextField fx:id="txtZoom" layoutX="223.0" layoutY="332.0" prefHeight="64.0" prefWidth="353.0" promptText="Room" style="-fx-background-color: transparent; -fx-border-color: blue;" />
+      <Button onAction="#submit"  layoutX="484.0" layoutY="439.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="92.0" style="-fx-background-color: blue;" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

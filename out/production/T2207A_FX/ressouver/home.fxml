@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: ;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Home">
+   <children>
+      <Button layoutX="111.0" layoutY="242.0" mnemonicParsing="false" onAction="#gotoClasss" prefHeight="116.0" prefWidth="178.0" style="-fx-background-color: red; -fx-cursor: hand;" text="Classes" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button onAction="#gotoStudent" layoutX="476.0" layoutY="242.0" mnemonicParsing="false" prefHeight="116.0" prefWidth="178.0" style="-fx-background-color: blue; -fx-cursor: hand;" text="Student" textFill="#f2f2f2">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
