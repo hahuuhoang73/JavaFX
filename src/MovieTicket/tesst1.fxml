@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="main_from" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="600.0" styleClass="bg-from" stylesheets="@test.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ticker.FXMLdoccument">
+   <children>
+      <ImageView fx:id="img1" fitHeight="300.0" fitWidth="600.0" layoutY="84.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/avata.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img2" fitHeight="300.0" fitWidth="600.0" layoutX="-600.0" layoutY="84.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/minion.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img3" fitHeight="300.0" fitWidth="600.0" layoutX="-600.0" layoutY="84.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/avata.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img4" fitHeight="300.0" fitWidth="600.0" layoutX="-600.0" layoutY="84.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/thor.jpeg" />
+         </image>
+      </ImageView>
+      <Text fill="#cd8b8b" layoutX="197.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COM CINEMA" textAlignment="CENTER">
+         <font>
+            <Font name="Bookman Old Style Bold" size="29.0" />
+         </font>
+      </Text>
+      <Button fx:id="main_next" layoutX="506.0" layoutY="392.0" mnemonicParsing="false" onAction="#gotoShoop" styleClass="but" stylesheets="@test.css" text="Next" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="main_minisize" layoutX="522.0" layoutY="2.0" mnemonicParsing="false" onAction="#main_minisize" prefHeight="30.0" prefWidth="38.0" styleClass="minus" stylesheets="@test.css">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="MINUS" styleClass="minus" />
+         </graphic>
+      </Button>
+      <Button fx:id="main_close" layoutX="559.0" layoutY="-1.0" mnemonicParsing="false" onAction="#main_close" prefHeight="30.0" prefWidth="38.0" styleClass="close" stylesheets="@test.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="CLOSE">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </FontAwesomeIcon>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
