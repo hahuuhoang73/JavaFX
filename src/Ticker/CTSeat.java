@@ -16,6 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -116,10 +117,17 @@ public class CTSeat implements Initializable {
 
     public Label selectedSeatsLabel11;
     public Label selectedSeatsLabel12;
+    public Label gt;
+    public Label gv;
+    public Label gd;
+    public Text total1;
     private Button confirmButton;
     private String selectedSeats = "";
-    private  int tong=0;
-
+    private  float pr1=0;
+    private float pr2=0;
+    private float total=0;
+    private  int qty1 =0;
+    private int qty2 =0;
 
 
 
@@ -244,7 +252,7 @@ public class CTSeat implements Initializable {
 
             selectedSeats += seatNumber + " ";
 
-            System.out.println("Seat " + seatNumber + " has value " + seatValue);
+//            System.out.println("Seat " + seatNumber + " has value " + seatValue);
 
         }
 
@@ -265,27 +273,28 @@ public class CTSeat implements Initializable {
             if (seatNumber1 >= 1 && seatNumber1 <= 10) {
                 if (seatButton != null && seatButton.getStyleClass().contains("selected")) {
                     selectedCount++;
-                    System.out.println("Số ghế thường được chọn: " + selectedCount);
+
 
                 }
             } else if (seatNumber1 >= 11 && seatNumber1 <= 16) {
                 if (seatButton != null && seatButton.getStyleClass().contains("selected")) {
                     selectedCount1++;
-                    System.out.println("Số ghế VIP được chọn: " + selectedCount1);
+
 
                 }
             }else {
                 if (seatButton != null && seatButton.getStyleClass().contains("selected")) {
                     selectedCount2++;
-                    System.out.println("Số ghế đôi được chọn: " + selectedCount2);
+
                 }
             }
         }
+        total=(selectedCount*15+selectedCount1*20+selectedCount2*30);
 
-        selectedSeatsLabel.setText(String.valueOf(selectedCount));
-
-        selectedSeatsLabel11.setText(String.valueOf(selectedCount1));
-        selectedSeatsLabel12.setText(String.valueOf(selectedCount2));
+        gt.setText("$"+String.valueOf(selectedCount*15));
+        gv.setText("$"+String.valueOf(selectedCount1*20));
+        gd.setText("$"+String.valueOf(selectedCount2*30));
+        total1.setText("$"+String.valueOf((total)));
 
 
 //        for (Node node : seatPane.getChildren()) {
@@ -324,6 +333,7 @@ public class CTSeat implements Initializable {
 //        selectedSeatsLabel.setText();
 
     }
+
 
 
 

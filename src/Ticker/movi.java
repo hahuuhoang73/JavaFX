@@ -2,7 +2,7 @@ package Ticker;
 
 import Phim.Movie;
 import dataDaoMovi.MoviDao;
-import database.database;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

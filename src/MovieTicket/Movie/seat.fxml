@@ -365,23 +365,21 @@
             <FontAwesomeIcon fill="WHITE" glyphName="CHECK" styleClass="check-confirm" />
          </graphic>
       </Button>
-      <Label fx:id="selectedSeatsLabel" layoutX="1045.0" layoutY="675.0" prefHeight="31.0" prefWidth="106.0" style="-fx-background-color: green;" textFill="WHITE">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label fx:id="selectedSeatsLabel11" layoutX="1045.0" layoutY="720.0" prefHeight="31.0" prefWidth="106.0" style="-fx-background-color: green;" textFill="WHITE">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
       <Text fill="#f8f8f8" layoutX="949.0" layoutY="696.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ghế thường:" />
       <Text fill="#f8f8f8" layoutX="962.0" layoutY="741.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ghế Vip:" />
-      <Label fx:id="selectedSeatsLabel12" layoutX="800.0" layoutY="701.0" prefHeight="31.0" prefWidth="106.0" style="-fx-background-color: green;" textFill="WHITE">
+      <Text fill="#f8f8f8" layoutX="585.0" layoutY="722.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ghế đôi:" />
+      <Label fx:id="gt" layoutX="1188.0" layoutY="676.0" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: white;" text="\$0.0" />
+      <Label fx:id="gv" layoutX="1188.0" layoutY="721.0" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: white;" text="\$0.0" />
+      <Label fx:id="gd" layoutX="771.0" layoutY="702.0" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: white;" text="\$0.0" />
+      <Text fill="#f8f8f8" layoutX="361.0" layoutY="727.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL:">
          <font>
-            <Font size="21.0" />
+            <Font name="System Bold" size="19.0" />
          </font>
-      </Label>
-      <Text fill="#f8f8f8" layoutX="683.0" layoutY="722.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ghế đôi:" />
+      </Text>
+      <Text fx:id="total1" fill="#e8e8e8" layoutX="444.0" layoutY="729.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.0">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

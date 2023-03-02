@@ -1,4 +1,4 @@
-package database;
+package Ticker;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
