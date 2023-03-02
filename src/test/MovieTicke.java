@@ -29,6 +29,7 @@ public class MovieTicke extends Application {
 //        primaryStage.show();
         FXMLdoccument.rootStage = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("../MovieTicket/tesst1.fxml"));
+//      Parent root = FXMLLoader.load(getClass().getResource("../MovieTicket/Movie/seat.fxml"));
 
 
         Scene scene = new Scene(root);

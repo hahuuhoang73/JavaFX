@@ -59,7 +59,9 @@ public class List implements Initializable {
         ArrayList<Classes> dslh = cd.getAll();
         tbClass.getItems().addAll(dslh);
         tbClass.refresh();
-
+//        prepared.setString(4,ava_imgtile.getText());
+//                prepared.execute();
+//                Clearr();
 //        try{
 //            Dtabase db =Dtabase.getInstance();
 //            Statement stt = db.getStatement();

@@ -43,10 +43,11 @@ public class Creat  {
 
             Classes c = new Classes(null,name,room);
             ClassesDao cd = ClassesDao.getInstance() ;
-            if (cd.creadte(c))
+            cd.creadte(c);
+//            if (cd.creadte(c))
                 gotoList(null);
-            else
-                throw  new Exception("Khong the tao lop hoc");
+//            else
+//                throw  new Exception("Khong the tao lop hoc");
 //            gotoList(null);
 
         }catch (Exception e){

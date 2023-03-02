@@ -1,0 +1,22 @@
+VBox{
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+Pane{
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+text{
+    -fx-font-weight: 700;
+}
+.btn-confirm{
+    -fx-background-color: #fff;
+    -fx-cursor: hand;
+}
+.btn-confirm:hover{
+    -fx-background-color: #ff0000;
+    -fx-text-fill: #fff;
+}
+.btn-confirm:focused{
+    -fx-background-color: #32cd32;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+}

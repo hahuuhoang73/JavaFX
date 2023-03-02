@@ -156,11 +156,11 @@
                               <Label layoutX="578.0" layoutY="112.0" styleClass="title-pay2" stylesheets="@movie.css" text="Quantity" />
                               <Label layoutX="734.0" layoutY="112.0" styleClass="title-pay2" stylesheets="@movie.css" text="Price($)" />
                               <Label layoutX="429.0" layoutY="164.0" styleClass="title-pay2" stylesheets="@movie.css" text="Special Class" />
-                              <Spinner onMouseClicked="#total" fx:id="spiner1" layoutX="579.0" layoutY="160.0" prefWidth="108.0" />
+                              <Spinner fx:id="spiner1" layoutX="579.0" layoutY="160.0" onMouseClicked="#total" prefWidth="108.0" />
                               <Label layoutX="430.0" layoutY="229.0" styleClass="title-pay2" stylesheets="@movie.css" text="Normal Class" />
-                              <Spinner onMouseClicked="#total"  fx:id="spiner2" layoutX="579.0" layoutY="225.0" prefWidth="108.0" />
-                              <Button fx:id="ava_clear" layoutX="341.0" layoutY="303.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="85.0" styleClass="btn-clear" stylesheets="@movie.css" text="Clear" />
-                              <Button fx:id="ava_Buy" layoutX="909.0" layoutY="303.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="85.0" styleClass="btn-buy" stylesheets="@movie.css" text="Buy" />
+                              <Spinner fx:id="spiner2" layoutX="579.0" layoutY="225.0" onMouseClicked="#total" prefWidth="108.0" />
+                              <Button fx:id="ava_clear" layoutX="341.0" layoutY="303.0" mnemonicParsing="false" onAction="#Clearr" prefHeight="45.0" prefWidth="85.0" styleClass="btn-clear" stylesheets="@movie.css" text="Clear" />
+                              <Button fx:id="ava_Buy" layoutX="909.0" layoutY="303.0" mnemonicParsing="false" onAction="#Buy" prefHeight="45.0" prefWidth="85.0" styleClass="btn-buy" stylesheets="@movie.css" text="Buy" />
                               <Button fx:id="ava_Rece" layoutX="796.0" layoutY="303.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="85.0" styleClass="btn-receipt" stylesheets="@../../Css/movie.css" text="Receipt" />
                               <Label fx:id="ava_priceSP" layoutX="735.0" layoutY="161.0" text="\$0.0">
                                  <font>
@@ -182,6 +182,11 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
+                              <Button layoutX="365.0" layoutY="159.0" mnemonicParsing="false" onAction="#gotoGhe" prefHeight="31.0" prefWidth="37.0" text="+">
+                                 <font>
+                                    <Font name="System Bold Italic" size="10.0" />
+                                 </font>
+                              </Button>
                            </children></AnchorPane>
                      </children>
                   </AnchorPane>

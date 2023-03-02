@@ -17,9 +17,13 @@ public class Main extends Application {
 //        Parent root = FXMLLoader.load(getClass().getResource("thongtin.fxml"));
 //        primaryStage.setScene(new Scene(root,800,600));
 //        primaryStage.show();
-//        Parent root = FXMLLoader.load(getClass().getResource("danhsach.fxml"));
-//        primaryStage.setScene(new Scene(root,800,600));
+//        Parent root = FXMLLoader.load(getClass().getResource("demnguoc.fxml"));
+//        primaryStage.setScene(new Scene(root,600,400));
 //        primaryStage.show();
+
+
+
+
         Home.rootStage = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("ressouver/home.fxml"));
         primaryStage.setScene(new Scene(root,800,600));
