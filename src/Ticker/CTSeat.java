@@ -21,7 +21,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Statement;
+import java.sql.*;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -121,12 +122,14 @@ public class CTSeat implements Initializable {
     public Label gv;
     public Label gd;
     public Text total1;
+    public Label ghe;
+    public Label tenphim;
     private Button confirmButton;
     private String selectedSeats = "";
     private  float pr1=0;
     private float pr2=0;
     private float total=0;
-    private  int qty1 =0;
+    private  int pr3 =0;
     private int qty2 =0;
 
 
@@ -251,10 +254,12 @@ public class CTSeat implements Initializable {
           button.setUserData(seatValue);
 
             selectedSeats += seatNumber + " ";
-
-//            System.out.println("Seat " + seatNumber + " has value " + seatValue);
+//
+//            System.out.println("Seat " + seatNumber );
+//            ghe.setText(selectedSeats);
 
         }
+
 
 //        selectedSeatsLabel.setText(selectedSeats);
         int seatNumber1 = Integer.parseInt(button.getText().substring(1));
@@ -290,6 +295,9 @@ public class CTSeat implements Initializable {
             }
         }
         total=(selectedCount*15+selectedCount1*20+selectedCount2*30);
+        pr1=(selectedCount*15);
+        pr2=(selectedCount1*20);
+        pr3=(selectedCount2*30);
 
         gt.setText("$"+String.valueOf(selectedCount*15));
         gv.setText("$"+String.valueOf(selectedCount1*20));
@@ -336,8 +344,10 @@ public class CTSeat implements Initializable {
 
 
 
-
-    public <NextPageController> void onConfirmClick(ActionEvent actionEvent) throws IOException {
+    private Connection connection;
+    private PreparedStatement prepared;
+    private ResultSet resultSet;
+    public <NextPageController> void onConfirmClick(ActionEvent event) throws IOException {
         ArrayList<Button> selectedButtons = new ArrayList<>();
         for (Node node : seatPane.getChildren()) {
             if (node instanceof Button && node.getStyleClass().contains("selected")) {
@@ -362,9 +372,7 @@ public class CTSeat implements Initializable {
             // Disable buttons
             for (Button button : selectedButtons) {
                 button.setDisable(true);
-                Parent root = FXMLLoader.load(getClass().getResource("../MovieTicket/Movie/customers.fxml"));
-                Scene scene = new Scene(root);
-                FXMLdoccument.rootStage.setScene(scene);
+               gotoMovi(null);
             }
         } else {
             // Thêm thông báo cho người dùng
@@ -384,23 +392,140 @@ public class CTSeat implements Initializable {
 //                }
 //            }
 //        }
+//        Button button = (Button) event.getSource();
+//        int seatNumber1 = Integer.parseInt(button.getText().substring(1));
+//        int selectedCount = 0;
+//        int selectedCount1 = 0;
+//        int selectedCount2 = 0;
+//        for (Node node : seatPane.getChildren()) {
+//            Button seatButton = null;
+//
+//
+//            if (node instanceof Button) {
+//                seatButton = (Button) node;
+//                seatNumber1 = Integer.parseInt(seatButton.getText().substring(1));
+//            }
+//
+//            if (seatNumber1 >= 1 && seatNumber1 <= 10) {
+//                if (seatButton != null && seatButton.getStyleClass().contains("selected")) {
+//                    selectedCount++;
+//
+//
+//                }
+//            } else if (seatNumber1 >= 11 && seatNumber1 <= 16) {
+//                if (seatButton != null && seatButton.getStyleClass().contains("selected")) {
+//                    selectedCount1++;
+//
+//
+//                }
+//            }else {
+//                if (seatButton != null && seatButton.getStyleClass().contains("selected")) {
+//                    selectedCount2++;
+//
+//                }
+//            }
+//        }
+//        total=(selectedCount*15+selectedCount1*20+selectedCount2*30);
+//        gt.setText("$"+String.valueOf(selectedCount*15));
+//        gv.setText("$"+String.valueOf(selectedCount1*20));
+//        gd.setText("$"+String.valueOf(selectedCount2*30));
+//        total1.setText("$"+String.valueOf((total)));
 
 
-        try {
-            String nameGhe =selectedSeatsLabel.getText();
-            if (nameGhe.isEmpty()){
-                throw new Exception("Vui long chon ghe!");
-            }
-            Dtabase db =Dtabase.getInstance();
-            Statement stt = db.getStatement();
-            String sql ="insert into chair_movie(chair) values('"+nameGhe+"')";
-            stt.executeUpdate(sql);
-
-
-
-        }  catch (Exception e) {
-            throw new RuntimeException(e);
+        String sql= "insert into customer(type,toal,date,title,time) values(?,?,?,?,?)";
+        connection= database.connectionDB();
+        String type="";
+        if (pr1>0 && pr2==0 && pr3==0){
+            type="NORMAL";
+        }else if (pr2>0 && pr1==0 && pr3==0){
+            type="V.I.P";
+        }else if (pr1==0 && pr2==0 && pr3>0){
+            type="DOUBLE";
+        }else if (pr1>0 && pr2>0 && pr3>0){
+            type="DOUBLE && V.I.P && NORMAL";
+        }else if (pr1>0 && pr2>0 && pr3==0){
+            type="NORMAL && V.I.P";
+        }else if (pr1>0 && pr2==0 && pr3>0){
+            type="NORMAL && DOUBLE";
+        }else if (pr1==0 && pr2>0 && pr3>0){
+            type="V.I.P && DOUBLE";
         }
+        java.util.Date date = new java.util.Date();
+        Date setDate = new Date(date.getTime());
+
+
+        try{
+            Alert alert;
+            if (pr1==0 && pr3==0 && pr2==0) {
+                alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error Massger");
+                alert.setHeaderText(null);
+                alert.setContentText("Please indicate the number of seats you would like to purchase.");
+                alert.showAndWait();
+            }else {
+
+                LocalTime localTime = LocalTime.now();
+                Time time = Time.valueOf(localTime);
+                String sql3 = "SELECT * FROM chair_movie ORDER BY id DESC LIMIT 1";
+                prepared = connection.prepareStatement(sql3);
+                resultSet = prepared.executeQuery();
+                while (resultSet.next()) {
+                    String ten = resultSet.getString("chair");
+                    tenphim.setText(ten);
+                }
+
+                prepared = connection.prepareStatement(sql);
+                prepared.setString(1, type);
+                prepared.setString(2, String.valueOf(total));
+                prepared.setString(3, String.valueOf(setDate));
+                prepared.setString(4, tenphim.getText());
+                prepared.setString(5, String.valueOf(time));
+                prepared.executeUpdate();
+                String sql1 = "select * from customer";
+                prepared = connection.prepareStatement(sql1);
+                resultSet = prepared.executeQuery();
+                int num = 0;
+                while (resultSet.next()) {
+                    num = resultSet.getInt("id");
+                }
+
+
+                String sql2 = "INSERT INTO  costomer_info(cutomer_id,type,total,movietitle,tienghe) values(?,?,?,?,?)";
+                prepared = connection.prepareStatement(sql2);
+                prepared.setString(1, String.valueOf(num));
+                prepared.setString(2, type);
+                prepared.setString(3, String.valueOf(total));
+                prepared.setString(4, tenphim.getText());
+                prepared.setString(5, selectedSeats);
+                prepared.execute();
+
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        System.out.println("tin"+total);
+
+
+
+
+
+
+//        try {
+//            String nameGhe =selectedSeatsLabel.getText();
+//            if (nameGhe.isEmpty()){
+//                throw new Exception("Vui long chon ghe!");
+//            }
+//            Dtabase db =Dtabase.getInstance();
+//            Statement stt = db.getStatement();
+//            String sql ="insert into chair_movie(chair) values('"+nameGhe+"')";
+//            stt.executeUpdate(sql);
+//
+//
+//
+//        }  catch (Exception e) {
+//            throw new RuntimeException(e);
+//        }
 
     }
 

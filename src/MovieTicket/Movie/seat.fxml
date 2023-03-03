@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
 <?import de.jensd.fx.glyphs.fontawesome.*?>
@@ -17,7 +18,7 @@
             <Image url="@../../img/background.jpg" />
          </image>
       </ImageView>
-      <Pane layoutX="41.0" prefHeight="767.0" prefWidth="276.0" stylesheets="@../../Css/style.css">
+      <Pane layoutX="28.0" prefHeight="767.0" prefWidth="284.0" stylesheets="@../../Css/style.css">
          <children>
             <Text fill="WHITE" layoutX="15.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The distance from the screento the nearest row of seats is 3m6" wrappingWidth="247.0">
                <font>
@@ -37,34 +38,34 @@
             <Pane layoutX="77.0" layoutY="643.0" prefHeight="40.0" prefWidth="57.0" style="-fx-background-color: #d6d6d6; -fx-background-radius: 3px;" />
             <Pane layoutX="210.0" layoutY="643.0" prefHeight="40.0" prefWidth="57.0" style="-fx-background-color: #d6d6d6; -fx-background-radius: 3px;" />
             <Pane layoutX="143.0" layoutY="643.0" prefHeight="40.0" prefWidth="57.0" style="-fx-background-color: #d6d6d6; -fx-background-radius: 3px;" />
-            <Pane layoutX="14.0" layoutY="354.0" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #d6d6d6; -fx-background-radius: 3px;">
+            <Pane layoutX="7.0" layoutY="354.0" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #d6d6d6; -fx-background-radius: 3px;">
                <children>
-                  <Text fill="RED" layoutX="48.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="I1" />
+                  <Text fill="RED" layoutX="43.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="I20" />
                </children>
             </Pane>
-            <Pane layoutX="15.0" layoutY="289.0" prefHeight="40.0" prefWidth="57.0" style="-fx-background-color: #d6d6d6; -fx-background-radius: 3px;">
+            <Pane layoutX="8.0" layoutY="289.0" prefHeight="40.0" prefWidth="57.0" style="-fx-background-color: #d6d6d6; -fx-background-radius: 3px;">
                <children>
-                  <Text fill="#001fff" layoutX="21.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="F3" />
+                  <Text fill="#001fff" layoutX="17.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="F11" />
                </children>
             </Pane>
-            <Pane layoutX="15.0" layoutY="227.0" prefHeight="40.0" prefWidth="57.0" style="-fx-background-color: #d6d6d6; -fx-background-radius: 3px;">
+            <Pane layoutX="8.0" layoutY="227.0" prefHeight="40.0" prefWidth="57.0" style="-fx-background-color: #d6d6d6; -fx-background-radius: 3px;">
                <children>
                   <Text layoutX="20.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A1" />
                </children>
             </Pane>
-            <Text fill="WHITE" layoutX="84.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="REGULAR SEAT">
+            <Text fill="WHITE" layoutX="69.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="NORMAL SEAT || $15">
                <font>
-                  <Font name="Arial" size="15.0" />
+                  <Font name="Arial" size="16.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="89.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="V.I.P SEAT">
+            <Text fill="WHITE" layoutX="74.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="V.I.P SEAT || $20">
                <font>
-                  <Font name="Arial" size="15.0" />
+                  <Font name="Arial" size="16.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="130.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="DOUBLE SEAT">
+            <Text fill="WHITE" layoutX="115.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="DOUBLE SEAT || $30">
                <font>
-                  <Font name="Arial" size="15.0" />
+                  <Font name="Arial" size="16.0" />
                </font>
             </Text>
             <ImageView fitHeight="202.0" fitWidth="198.0" layoutX="39.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
@@ -72,55 +73,6 @@
                   <Image url="@../../img/logo.png" />
                </image>
             </ImageView>
-            <AnchorPane layoutX="-64.0" layoutY="-48.0" prefHeight="705.0" prefWidth="417.0">
-               <children>
-                  <Pane layoutX="356.0" layoutY="447.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
-                     <children>
-                        <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="E" />
-                     </children>
-                  </Pane>
-                  <Pane layoutX="356.0" layoutY="665.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
-                     <children>
-                        <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="I" />
-                     </children>
-                  </Pane>
-                  <Pane layoutX="356.0" layoutY="555.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
-                     <children>
-                        <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="G" />
-                     </children>
-                  </Pane>
-                  <Pane layoutX="356.0" layoutY="502.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
-                     <children>
-                        <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="F" />
-                     </children>
-                  </Pane>
-                  <Pane layoutX="356.0" layoutY="611.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
-                     <children>
-                        <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="H" />
-                     </children>
-                  </Pane>
-                  <Pane layoutX="356.0" layoutY="334.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
-                     <children>
-                        <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="C" />
-                     </children>
-                  </Pane>
-                  <Pane layoutX="356.0" layoutY="279.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
-                     <children>
-                        <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="B" />
-                     </children>
-                  </Pane>
-                  <Pane layoutX="356.0" layoutY="224.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
-                     <children>
-                        <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="A" />
-                     </children>
-                  </Pane>
-                  <Pane layoutX="356.0" layoutY="388.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
-                     <children>
-                        <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="D" />
-                     </children>
-                  </Pane>
-               </children>
-            </AnchorPane>
          </children>
       </Pane>
       <AnchorPane fx:id="seatPane" layoutX="465.0" layoutY="167.0" prefHeight="496.0" prefWidth="790.0">
@@ -325,7 +277,6 @@
                   </Text>
                </children>
             </Pane>
-            <Button layoutX="14.0" layoutY="56.0" mnemonicParsing="false" onAction="#gotoMovi" styleClass="btn-confirm" stylesheets="@../../Css/style.css" text="Back&lt;&lt;" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="388.0" layoutY="155.0" prefHeight="519.0" prefWidth="109.0">
@@ -360,26 +311,91 @@
             <Pane layoutY="462.0" prefHeight="41.0" prefWidth="109.0" stylesheets="@../../Css/style.css" />
          </children>
       </AnchorPane>
-      <Button layoutX="1250.0" layoutY="720.0" mnemonicParsing="false" onAction="#onConfirmClick" styleClass="btn-confirm" stylesheets="@../../Css/style.css" text="Confirm">
-         <graphic>
-            <FontAwesomeIcon fill="WHITE" glyphName="CHECK" styleClass="check-confirm" />
-         </graphic>
-      </Button>
-      <Text fill="#f8f8f8" layoutX="949.0" layoutY="696.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ghế thường:" />
-      <Text fill="#f8f8f8" layoutX="962.0" layoutY="741.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ghế Vip:" />
-      <Text fill="#f8f8f8" layoutX="585.0" layoutY="722.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ghế đôi:" />
-      <Label fx:id="gt" layoutX="1188.0" layoutY="676.0" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: white;" text="\$0.0" />
-      <Label fx:id="gv" layoutX="1188.0" layoutY="721.0" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: white;" text="\$0.0" />
-      <Label fx:id="gd" layoutX="771.0" layoutY="702.0" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: white;" text="\$0.0" />
-      <Text fill="#f8f8f8" layoutX="361.0" layoutY="727.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL:">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </Text>
-      <Text fx:id="total1" fill="#e8e8e8" layoutX="444.0" layoutY="729.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.0">
-         <font>
-            <Font name="System Bold" size="21.0" />
-         </font>
-      </Text>
+      <AnchorPane layoutY="723.0" prefHeight="45.0" prefWidth="1366.0" style="-fx-background-color: #000;">
+         <children>
+            <Text fill="#f8f8f8" layoutX="920.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL:">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Text>
+            <Text fx:id="total1" fill="#e8e8e8" layoutX="1003.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.0">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#f8f8f8" layoutX="397.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Normal Seat" />
+            <Label fx:id="gt" layoutX="496.0" layoutY="8.0" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #fff; -fx-font-weight: bold; -fx-label-padding: 0px 5px;" text="\$0.0" />
+            <Text fill="#f8f8f8" layoutX="740.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Double Seat" />
+            <Label fx:id="gd" layoutX="837.0" layoutY="9.0" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-label-padding: 0px 5px;" text="\$0.0" />
+            <Text fill="#f8f8f8" layoutX="580.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="V.I.P Seat" />
+            <Label fx:id="gv" layoutX="658.0" layoutY="8.0" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-label-padding: 0px 5px;" text="\$0.0" />
+            <Button layoutX="1259.0" layoutY="7.0" mnemonicParsing="false" onAction="#onConfirmClick" style="-fx-background-color: GREEN; -fx-font-weight: BOLD;" text="Confirm" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CHECK" styleClass="check-confirm" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="7.0" layoutY="7.0" mnemonicParsing="false" onAction="#gotoMovi" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: #FF0000; -fx-font-weight: BOLD;" stylesheets="@../../Css/style.css" text="Back" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="ANGLE_DOUBLE_LEFT" size="1.4em" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-26.0" layoutY="-43.0" prefHeight="705.0" prefWidth="377.0">
+         <children>
+            <Pane layoutX="356.0" layoutY="447.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
+               <children>
+                  <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="E" />
+               </children>
+            </Pane>
+            <Pane layoutX="356.0" layoutY="665.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
+               <children>
+                  <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="I" />
+               </children>
+            </Pane>
+            <Pane layoutX="356.0" layoutY="555.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
+               <children>
+                  <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="G" />
+               </children>
+            </Pane>
+            <Pane layoutX="356.0" layoutY="502.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
+               <children>
+                  <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="F" />
+               </children>
+            </Pane>
+            <Pane layoutX="356.0" layoutY="611.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
+               <children>
+                  <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="H" />
+               </children>
+            </Pane>
+            <Pane layoutX="356.0" layoutY="334.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
+               <children>
+                  <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="C" />
+               </children>
+            </Pane>
+            <Pane layoutX="356.0" layoutY="279.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
+               <children>
+                  <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="B" />
+               </children>
+            </Pane>
+            <Pane layoutX="356.0" layoutY="224.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
+               <children>
+                  <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="A" />
+               </children>
+            </Pane>
+            <Pane layoutX="356.0" layoutY="388.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 50%;" stylesheets="@../../Css/style.css">
+               <children>
+                  <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 23;" text="D" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Label fx:id="ghe" layoutX="388.0" layoutY="675.0" prefHeight="40.0" prefWidth="109.0" text="Label" textFill="WHITE" />
+      <Label fx:id="tenphim" layoutX="497.0" layoutY="675.0" prefHeight="40.0" prefWidth="443.0" text="Label" textFill="WHITE" />
    </children>
 </AnchorPane>

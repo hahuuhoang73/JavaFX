@@ -134,16 +134,16 @@ spiner2.setValueFactory(sp2);
     private PreparedStatement prepared;
     private ResultSet resultSet;
     public void Buy() throws Exception {
-        String sql= "insert into customer(type,toal,date) values(?,?,?)";
+        String sql= "insert into customer(type,toal,date,title) values(?,?,?,?)";
        connection= database.connectionDB();
         String type="";
-        if (pr1>0 && pr2==0){
-            type="PR class";
-        }else if (pr2>0 && pr1==0){
-            type="NO class";
-        }else  if (pr1>0 && pr2>0){
-            type="PR class && NO class";
-        }
+//        if (pr1>0 && pr2==0){
+//            type="PR class";
+//        }else if (pr2>0 && pr1==0){
+//            type="NO class";
+//        }else  if (pr1>0 && pr2>0){
+//            type="PR class && NO class";
+//        }
         java.util.Date date = new java.util.Date();
         Date setDate = new Date(date.getTime());
 
@@ -151,27 +151,30 @@ spiner2.setValueFactory(sp2);
         try{
            prepared = connection.prepareStatement(sql);
 
-          prepared.setString(1,type);
-            prepared.setString(2,String.valueOf(total));
-            prepared.setString(3,String.valueOf(setDate));
+//          prepared.setString(1,type);
+//            prepared.setString(2,String.valueOf(0));
+//            prepared.setString(3,String.valueOf(setDate));
+//            prepared.setString(4, ava_imgtile.getText());
             Alert alert;
             if (ava_imgview.getImage()==null || ava_imgtile.getText().isEmpty()){
                 alert =new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error Massger");
                 alert.setHeaderText(null);
-                alert.setContentText("Vui lòng chọn Phim trước");
+                alert.setContentText("Please select Movie first");
                 alert.showAndWait();
-            }else if (pr2==0 && pr1==0){
-                alert =new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Error Massger");
-                alert.setHeaderText(null);
-                alert.setContentText("Vui lòng cho biết số lượng vé bạn muốn mua.");
-                alert.showAndWait();
-            }else {
-                prepared.executeUpdate();
+
+//            else if (pr2==0 && pr1==0){
+//                alert =new Alert(Alert.AlertType.ERROR);
+//                alert.setTitle("Error Massger");
+//                alert.setHeaderText(null);
+//                alert.setContentText("Vui lòng cho biết số lượng vé bạn muốn mua.");
+//                alert.showAndWait();
+            }else
+            {
+
                 alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText(null);
-                alert.setContentText("Mời bạn sang trang chọn ghế ");
+                alert.setContentText("Please go to the seat selection page");
                 alert.showAndWait();
 
                 String sql1 = "select * from customer";
@@ -181,13 +184,11 @@ spiner2.setValueFactory(sp2);
                 while (resultSet.next()) {
                     num = resultSet.getInt("id");
                 }
-                String sql2 = "INSERT INTO  costomer_info(cutomer_id,type,total,movietitle,tienghe) values(?,?,?,?,?)";
+                String sql2 = "INSERT INTO  chair_movie(chair) values(?)";
                 prepared = connection.prepareStatement(sql2);
-                prepared.setString(1, String.valueOf(num));
-                prepared.setString(2, type);
-                prepared.setString(3, String.valueOf(total));
-                prepared.setString(4, ava_imgtile.getText());
-                prepared.setString(5, String.valueOf(0));
+
+                prepared.setString(1, ava_imgtile.getText());
+
                 prepared.execute();
                 Clearr();
 //
@@ -216,13 +217,8 @@ spiner2.setValueFactory(sp2);
 
     }
     public void Clearr() {
-        sp1 = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,10,0);
-        sp2 = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,10,0);
-        spiner1.setValueFactory(sp1);
-        spiner2.setValueFactory(sp2);
-        ava_priceSP.setText("$0.0");
-        ava_priceNO.setText("$0.0");
-        ava_Total.setText("$0.0");
+
+
         ava_imgview.setImage(null);
         ava_imgtile.setText("");
     }
@@ -238,7 +234,7 @@ spiner2.setValueFactory(sp2);
         ArrayList<Movie> dsphim= cd.getAll();
         tabview.getItems().addAll(dsphim);
         tabview.refresh();
-        Showspiner();
+
 
 
 

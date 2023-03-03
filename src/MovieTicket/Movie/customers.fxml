@@ -112,13 +112,13 @@
                                     <Label fx:id="custom_time" layoutX="128.0" layoutY="185.0" prefHeight="33.0" prefWidth="137.0" styleClass="txt-label" stylesheets="@../../Css/movie.css" text="23:10:04" />
                                  </children>
                               </AnchorPane>
-                              <Button fx:id="custom_clear" layoutX="14.0" layoutY="348.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="99.0" styleClass="btn-clear" stylesheets="@../../Css/movie.css" text="Clear" />
-                              <Button fx:id="custom_delete" layoutX="187.0" layoutY="348.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="99.0" styleClass="btn-delete" stylesheets="@../../Css/movie.css" text="Delete" />
+                              <Button fx:id="custom_clear" layoutX="14.0" layoutY="348.0" mnemonicParsing="false" onAction="#clear" prefHeight="39.0" prefWidth="99.0" styleClass="btn-clear" stylesheets="@../../Css/movie.css" text="Clear" />
+                              <Button fx:id="custom_delete" layoutX="187.0" layoutY="348.0" mnemonicParsing="false" onAction="#delete" prefHeight="39.0" prefWidth="99.0" styleClass="btn-delete" stylesheets="@../../Css/movie.css" text="Delete" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="340.0" layoutY="15.0" prefHeight="695.0" prefWidth="797.0" styleClass="bg-white" stylesheets="@../../Css/movie.css">
                            <children>
-                              <TableView fx:id="custom_table" layoutX="11.0" layoutY="84.0" prefHeight="598.0" prefWidth="776.0" stylesheets="@../../Css/movie.css">
+                              <TableView fx:id="custom_table" layoutX="11.0" layoutY="84.0" onMouseClicked="#selcet" prefHeight="598.0" prefWidth="776.0" stylesheets="@../../Css/movie.css">
                                 <columns>
                                   <TableColumn fx:id="custom_col_id" prefWidth="121.0" text="Ticket Number" />
                                   <TableColumn fx:id="custom_col_tile" prefWidth="224.0" text="Movie Title" />
