@@ -111,7 +111,7 @@ public class cus implements Initializable {
             while (resultSet.next()){
                 cutommer = new Cutommer(resultSet.getInt("id"),resultSet.getString("type"),
                 resultSet.getDouble("toal"),resultSet.getDate("date"),
-                resultSet.getString("time"),resultSet.getTime("time"));
+                resultSet.getString("title"),resultSet.getTime("time"));
                 cutommersL.add(cutommer);
             }
 

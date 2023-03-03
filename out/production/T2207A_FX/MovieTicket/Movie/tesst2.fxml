@@ -16,16 +16,7 @@
                <children>
                   <AnchorPane layoutX="569.0" layoutY="-100.0" prefHeight="38.0" prefWidth="1366.0" styleClass="top-from" stylesheets="@../../Css/test.css" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button layoutX="1294.0" layoutY="4.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="72.0" styleClass="close1" stylesheets="@../../Css/test.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
-                           <graphic>
-                              <FontAwesomeIcon glyphName="CLOSE" size="1.2em" />
-                           </graphic>
-                        </Button>
-                        <Button layoutX="1229.0" layoutY="2.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="63.0" styleClass="minus1" stylesheets="@../../Css/test.css">
-                           <graphic>
-                              <FontAwesomeIcon glyphName="MINUS" size="1.2em" />
-                           </graphic>
-                        </Button>
+                        <Button layoutX="1294.0" layoutY="4.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="72.0" styleClass="close1" stylesheets="@../../Css/test.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
                         <Label layoutX="38.0" layoutY="9.0" text="Movie Ticket Booking Management system">
                            <font>
                               <Font name="Microsoft Sans Serif" size="13.0" />
@@ -50,16 +41,11 @@
                         <Image url="@../../img/logo.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="22.0" layoutY="664.0" mnemonicParsing="false" onAction="#gotoBack" styleClass="signout" stylesheets="@../../Css/test.css" textFill="#fcfcfc">
+                  <Button layoutX="22.0" layoutY="664.0" mnemonicParsing="false" onAction="#gotoBack" styleClass="signout" stylesheets="@../../Css/test.css" text="Back" textFill="#fcfcfc">
                      <graphic>
-                        <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="1.4em" />
+                        <FontAwesomeIcon fill="WHITE" glyphName="ANGLE_DOUBLE_LEFT" size="1.4em" />
                      </graphic>
                   </Button>
-                  <Label layoutX="87.0" layoutY="669.0" text="Back" textFill="WHITE">
-                     <font>
-                        <Font name="Microsoft Sans Serif" size="18.0" />
-                     </font>
-                  </Label>
                   <Button fx:id="das" layoutX="10.0" layoutY="336.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #ae2d3c;" styleClass="nav-btn" stylesheets="@../../Css/test.css" text="Dashboard" AnchorPane.leftAnchor="10.0">
                      <graphic>
                         <FontAwesomeIcon fill="WHITE" glyphName="DASHBOARD" />
@@ -156,7 +142,14 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="5.0" layoutY="269.0" prefHeight="441.0" prefWidth="1141.0" styleClass="bg-white" stylesheets="@../../Css/test.css" />
+                        <AnchorPane layoutX="5.0" layoutY="269.0" prefHeight="441.0" prefWidth="1141.0" styleClass="bg-white" stylesheets="@../../Css/test.css">
+                           <children>
+                              <ImageView fitHeight="438.0" fitWidth="1134.0" layoutX="5.0" layoutY="2.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../img/banner.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
                      </children>
                   </AnchorPane>
                </children>
