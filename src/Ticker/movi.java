@@ -112,8 +112,8 @@ public class movi implements Initializable {
     public void Showspiner(){
         sp1 = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,10,0);
         sp2 = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,10,0);
-spiner1.setValueFactory(sp1);
-spiner2.setValueFactory(sp2);
+        spiner1.setValueFactory(sp1);
+        spiner2.setValueFactory(sp2);
     }
     public  void total(){
 

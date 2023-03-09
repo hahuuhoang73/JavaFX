@@ -14,7 +14,7 @@ private static Dtabase instance;
     private Dtabase() throws Exception{
 
             Class.forName("com.mysql.jdbc.Driver");
-            String connectionString = "jdbc:mysql://localhost:3306/moviticker";
+            String connectionString = "jdbc:mysql://localhost:3306/cangtin";
             String user ="root";
             String pwd = "";
             Connection conn= DriverManager.getConnection(connectionString, user, pwd);
