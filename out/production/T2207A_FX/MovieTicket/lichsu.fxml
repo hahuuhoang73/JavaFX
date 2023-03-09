@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:controller="cangtin.LSmua" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="768.0" fitWidth="1366.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/cantin.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tbView" layoutX="158.0" layoutY="21.0" prefHeight="727.0" prefWidth="1050.0" styleClass="VBox" stylesheets="@../Css/style.css">
+        <columns>
+          <TableColumn fx:id="txtID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="txtName" prefWidth="371.0" text="Tên Hàng " />
+            <TableColumn fx:id="txtSL" minWidth="0.0" prefWidth="101.0" text="Số lượng " />
+            <TableColumn fx:id="txtGT" prefWidth="190.0" text="Giá tiền " />
+            <TableColumn fx:id="txtNg" prefWidth="154.0" text="Ngày mua " />
+
+        </columns>
+      </TableView>
+      <Button onAction="#gotoBack" layoutX="21.0" layoutY="21.0" mnemonicParsing="false" styleClass="signout" stylesheets="@../Css/movie.css" text="Back&lt;&lt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

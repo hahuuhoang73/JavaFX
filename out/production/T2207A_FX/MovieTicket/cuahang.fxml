@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cangtin.Banhang">
+   <children>
+      <ImageView fitHeight="768.0" fitWidth="1366.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/cantin.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tbCuahang" layoutX="73.0" layoutY="86.0" onMouseClicked="#select" prefHeight="622.0" prefWidth="705.0">
+        <columns>
+          <TableColumn fx:id="cID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="cName" prefWidth="324.0" text="Name" />
+            <TableColumn fx:id="cTien" prefWidth="159.0" text="Giá tiền " />
+            <TableColumn prefWidth="145.0" text="Action " />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="821.0" layoutY="86.0" prefHeight="622.0" prefWidth="510.0" styleClass="top-from" stylesheets="@../Css/movie.css">
+         <children>
+            <Label fx:id="txtTien" layoutX="185.0" layoutY="194.0" prefHeight="43.0" prefWidth="172.0" styleClass="label-info" stylesheets="@../Css/movie.css" text="Giá tiền" />
+            <Text layoutX="41.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng cộng  :" wrappingWidth="111.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Spinner fx:id="spiner1" layoutX="188.0" layoutY="140.0" onMouseClicked="#total" prefWidth="108.0" />
+            <Button layoutX="211.0" layoutY="327.0" mnemonicParsing="false" onAction="#thanhtoan" prefHeight="43.0" prefWidth="105.0" text="Thanh toán" />
+            <Label fx:id="txtTen" layoutX="185.0" layoutY="80.0" prefHeight="43.0" prefWidth="172.0" styleClass="label-info" stylesheets="@../Css/movie.css" />
+            <Text layoutX="57.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên món   :" wrappingWidth="111.0">
+               <text>
+                  <Spinner layoutX="57.0" layoutY="209.0" prefWidth="108.0" />
+               </text>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text layoutX="59.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="So Luong:" wrappingWidth="75.0" />
+         </children></AnchorPane>
+      <Button layoutX="28.0" layoutY="25.0" mnemonicParsing="false" onAction="#gotoBack" styleClass="signout" stylesheets="@../Css/movie.css" text="Back&lt;&lt;" textFill="#ebebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
